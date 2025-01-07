@@ -11,25 +11,25 @@
 </head>
 <body>
     <div>
-        <form>
+        <form method="POST" action="/users/create-user">
             <div class = "container">
                 <div class="row">
                     <div class="mb-3 mt-3 col-6">
                         <label for="username" class="form-label">username</label>
-                        <input type="text" class="form-control" id="username">
+                        <input type="text" class="form-control" name="username"id ="username" required>
                     </div>
                     <div class="mb-3 mt-3 col-6">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password">
+                        <input type="password" class="form-control" name="password" id="password" required>
                     </div>
 
                     <div class="mb-3 mt-3 col-6">
                         <label for="phone" class="form-label">Phone</label>
-                        <input type="number" class="form-control" id="phone">
+                        <input type="number" class="form-control" name="PhoneNumber" id="phone" required>
                     </div>
                     <div class="mb-3 mt-3 col-6">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="email" class="form-control"name="email" id="email" required>
                     </div>
                     <div class="col-6">
                         <button type="submit" class="btn btn-primary">Submit</button>
