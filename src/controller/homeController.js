@@ -2,7 +2,7 @@ const handleHome = (req,res) => {
     return res.render("Home.ejs");
 }
 
-const handleUser = (req,res) => {
+const handleUserPage = (req,res) => {
     //moudule from database
     return res.render("User.ejs");
 }
@@ -17,5 +17,5 @@ const handlelogin = (req,res) => {
 
 
 module.exports = {
-    handleHome, handleUser, handleregister, handlelogin
+    handleHome, handleUserPage, handleregister, handlelogin
 }

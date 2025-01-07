@@ -4,7 +4,7 @@ const router = express.Router();
 
 const initWebRoutes = (app) => {
     router.get("/", homeController.handleHome);
-    router.get("/user", homeController.handleUser);
+    router.get("/user", homeController.handleUserPage);
 
     return app.use("/", router);
 }
