@@ -8,7 +8,7 @@ const handleUserPage = async (req, res) => {
   //moudule from database
 
   let userlist = await UserService.getUserList();
-  return res.render("User.ejs", {userlist});
+  return res.render("User.ejs", { userlist });
 };
 
 const handelUserCreate = (req, res) => {
@@ -20,8 +20,13 @@ const handelUserCreate = (req, res) => {
 
   UserService.createNewUser(username, password, age, email, phonenumber);
 
-  return res.send("handelUserCreate");
+  return res.redirect("/user");
 };
+
+const  handelDeleteUser = async (req,res) => {
+  await UserService.deleteUser(req.params.id);
+  return res.redirect("/user");
+}
 
 const handleregister = (req, res) => {
   return res.render("register.ejs");
@@ -31,10 +36,12 @@ const handlelogin = (req, res) => {
   return res.render("login.ejs");
 };
 
+
 module.exports = {
   handleHome,
   handleUserPage,
   handelUserCreate,
+  handelDeleteUser,
   handleregister,
   handlelogin,
 };
