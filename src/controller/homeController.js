@@ -1,10 +1,5 @@
-import mysql2 from 'mysql2';
+import UserService from '../service/UserService';
 
-const connection = mysql2.createConnection({
-    host: 'localhost',
-    user: 'root',        // Tên người dùng MySQL
-    database: 'jwt' // Tên cơ sở dữ liệu
-});
 
 
 const handleHome = (req,res) => {
@@ -21,17 +16,13 @@ const handelUserCreate = (req,res) => {
     let username = req.body.username;
     let password = req.body.password;
     let phonenumber = req.body.PhoneNumber;
+    let age = req.body.age;
 
-    
 
-    connection.query(
-        'INSERT INTO users (username, password, email, phone) VALUES (?, ?, ?, ?)',[username, password, email, phonenumber],
-        function (err, results,fields){
-            console.log(results);
-            console.log(fields);
-        }
-    )
-    console.log(">>> Check request ", req.body);
+
+    UserService.createNewUser(username,password,age,email,phonenumber);
+
+
     return res.send("handelUserCreate");
 }
 
