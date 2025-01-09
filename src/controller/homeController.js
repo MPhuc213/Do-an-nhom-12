@@ -26,8 +26,27 @@ const handelUserCreate = (req, res) => {
 const  handelDeleteUser = async (req,res) => {
   await UserService.deleteUser(req.params.id);
   return res.redirect("/user");
-}
+};
 
+const handleUserPageUpdate = async (req,res) => {
+  let id = req.params.id;
+  let user = await UserService.getUserById(id);
+  let userData = {};
+  if(user && user.length > 0){
+    userData = user[0];
+  }
+  return res.render("User-update.ejs", {userData});
+};
+
+const handleUpdateUser = async (req,res) => {
+  let username = req.body.username;
+  let age = req.body.age;
+  let email = req.body.email;
+  let phone = req.body.PhoneNumber;
+  let id = req.body.id;
+  await UserService.UpdateUserInfor(username,age,email,phone,id);
+  return res.redirect("/users");
+};
 const handleregister = (req, res) => {
   return res.render("register.ejs");
 };
@@ -44,4 +63,6 @@ module.exports = {
   handelDeleteUser,
   handleregister,
   handlelogin,
+  handleUserPageUpdate,
+  handleUpdateUser,
 };
