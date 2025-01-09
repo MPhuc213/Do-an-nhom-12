@@ -20,12 +20,12 @@ const handelUserCreate = (req, res) => {
 
   UserService.createNewUser(username, password, age, email, phonenumber);
 
-  return res.redirect("/user");
+  return res.redirect("/users");
 };
 
 const  handelDeleteUser = async (req,res) => {
   await UserService.deleteUser(req.params.id);
-  return res.redirect("/user");
+  return res.redirect("/users");
 };
 
 const handleUserPageUpdate = async (req,res) => {
