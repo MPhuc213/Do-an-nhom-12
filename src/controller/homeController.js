@@ -8,7 +8,7 @@ const handleUserPage = async (req, res) => {
   //moudule from database
 
   let userlist = await UserService.getUserList();
-  return res.render("User.ejs", { userlist });
+  return res.render("user.ejs", { userlist });
 };
 
 const handelUserCreate = (req, res) => {
@@ -20,32 +20,32 @@ const handelUserCreate = (req, res) => {
 
   UserService.createNewUser(username, password, age, email, phonenumber);
 
-  return res.redirect("/users");
+  return res.redirect("/user");
 };
 
-const  handelDeleteUser = async (req,res) => {
+const handelDeleteUser = async (req, res) => {
   await UserService.deleteUser(req.params.id);
-  return res.redirect("/users");
+  return res.redirect("/user");
 };
 
-const handleUserPageUpdate = async (req,res) => {
+const handleUserPageUpdate = async (req, res) => {
   let id = req.params.id;
   let user = await UserService.getUserById(id);
   let userData = {};
-  if(user && user.length > 0){
+  if (user && user.length > 0) {
     userData = user[0];
   }
-  return res.render("User-update.ejs", {userData});
+  return res.render("user-update.ejs", { userData });
 };
 
-const handleUpdateUser = async (req,res) => {
+const handleUpdateUser = async (req, res) => {
   let username = req.body.username;
   let age = req.body.age;
   let email = req.body.email;
   let phone = req.body.PhoneNumber;
   let id = req.body.id;
-  await UserService.UpdateUserInfor(username,age,email,phone,id);
-  return res.redirect("/users");
+  await UserService.UpdateUserInfor(username, age, email, phone, id);
+  return res.redirect("/user");
 };
 const handleregister = (req, res) => {
   return res.render("register.ejs");
@@ -54,7 +54,6 @@ const handleregister = (req, res) => {
 const handlelogin = (req, res) => {
   return res.render("login.ejs");
 };
-
 
 module.exports = {
   handleHome,
