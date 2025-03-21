@@ -1,0 +1,201 @@
+body {
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, rgba(13, 71, 161, 0.9), rgba(33, 33, 33, 0.9));
+    color: white;
+    text-align: center;
+    padding: 120px 20px 60px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    min-height: 350px;
+}
+
+header .banner {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    margin: 15px 0;
+    font-size: 1.3em;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    background: linear-gradient(90deg, #0D47A1, #1565C0);
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    font-weight: 600;
+    border: 2px solid #1565C0;
+}
+
+.home-link:hover {
+    background: linear-gradient(90deg, #0B3D8F, #134B9E);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.6);
+}
+
+.search-section, .recruit-section, .job-list-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(33, 33, 33, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid #0D47A1;
+}
+
+.search-section h2, .recruit-section h2, .job-list-section h2 {
+    color: #BBDEFB;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #1565C0;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.search-container .search-form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #455A64;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #2C2C2C;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #0D47A1;
+    box-shadow: 0 0 8px rgba(13, 71, 161, 0.3);
+    outline: none;
+}
+
+.search-button {
+    background: linear-gradient(90deg, #0D47A1, #1A237E);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.4s ease;
+}
+
+.search-button:hover {
+    background: linear-gradient(90deg, #0B3D8F, #10227E);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.6);
+}
+
+.recruit-container p {
+    color: #B0BEC5;
+    margin-bottom: 20px;
+}
+
+.job-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input {
+    padding: 12px;
+    border: 2px solid #455A64;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #2C2C2C;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #0D47A1;
+    box-shadow: 0 0 8px rgba(13, 71, 161, 0.3);
+    outline: none;
+}
+
+.recruit-button {
+    background: linear-gradient(90deg, #0D47A1, #1565C0);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.4s ease;
+    font-weight: 600;
+}
+
+.recruit-button:hover {
+    background: linear-gradient(90deg, #0B3D8F, #134B9E);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.6);
+}
+
+.job-list {
+    margin-top: 20px;
+}
+
+.job-item {
+    background: #2C2C2C;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border-left: 4px solid #0D47A1;
+}
+
+.job-item h3 {
+    color: #BBDEFB;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+}
+
+.job-item p {
+    color: #B0BEC5;
+    margin: 5px 0;
+}
+
+.job-item .delete-btn {
+    background: #EF5350;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.job-item .delete-btn:hover {
+    background: #D32F2F;
+}

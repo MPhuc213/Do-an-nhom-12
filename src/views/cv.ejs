@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo CV Tuyển Dụng</title>
+    <link rel="stylesheet" href="/css/cv.css">
+</head>
+<body>
+    <header>
+        <h1>Tạo CV Online - Ứng Tuyển 2025</h1>
+        <p>Cá nhân hóa CV của bạn theo phong cách hiện đại và chuyên nghiệp.</p>
+        <a href="/" class="home-link">Trở về Trang Chủ</a>
+    </header>
+
+    <section class="cv-form">
+        <h2>Thông Tin Cá Nhân</h2>
+        <form id="cvForm">
+            <label for="fullName">Họ và Tên:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="photo">Ảnh Cá Nhân:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <label for="experience">Kinh Nghiệm Làm Việc:</label>
+            <textarea id="experience" name="experience" rows="5" required></textarea>
+
+            <label for="education">Học Vấn:</label>
+            <textarea id="education" name="education" rows="5" required></textarea>
+
+            <label for="evidence">Minh Chứng (PDF, hình ảnh...):</label>
+            <input type="file" id="evidence" name="evidence" multiple accept=".pdf,image/*">
+
+            <label for="recruiterEmail">Email Nhà Tuyển Dụng:</label>
+            <input type="email" id="recruiterEmail" name="recruiterEmail" placeholder="Nhập email để gửi CV">
+
+            <button type="button" onclick="generateCV()">Tạo CV</button>
+            <button type="button" onclick="sendCV()" id="sendButton" disabled>Gửi CV</button>
+            <a href="/" class="home-button">Trở về Trang Chủ</a>
+        </form>
+    </section>
+
+    <section class="cv-preview" id="cvPreview">
+        <h2>Xem Trước CV</h2>
+        <div id="cvContent"></div>
+    </section>
+
+    <script src="cv.js"></script>
+</body>
+</html>

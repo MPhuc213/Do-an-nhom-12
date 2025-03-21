@@ -1,0 +1,3 @@
+npx sequelize-cli db:migrate // create database
+
+npx sequelize-cli db:seed:all // thêm thuộc tính cho database

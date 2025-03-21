@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Tin Tuyển Dụng & Tìm Kiếm Ứng Viên</title>
+    <link rel="stylesheet" href="/css/dttd.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Tìm Việc Làm & Tuyển Dụng Hiệu Quả</h1>
+            <p>Kết nối nhà tuyển dụng và ứng viên chuyên nghiệp</p>
+            <a href="/" class="home-link">Trở Lại Trang Chủ</a>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="search-container">
+            <h2>Tìm Kiếm Công Việc</h2>
+            <div class="search-form">
+                <input type="text" id="keyword" placeholder="Nhập từ khóa (vị trí, kỹ năng, công ty...)" class="search-input">
+                <input type="text" id="location" placeholder="Địa điểm (VD: Hà Nội, TP.HCM)" class="search-input">
+                <select id="job-type" class="search-input">
+                    <option value="">Loại công việc</option>
+                    <option value="full-time">Toàn thời gian</option>
+                    <option value="part-time">Bán thời gian</option>
+                    <option value="remote">Làm việc từ xa</option>
+                </select>
+                <button onclick="searchJobs()" class="search-button">Tìm Kiếm</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="recruit-section">
+        <div class="recruit-container">
+            <h2>Đăng Tin Tuyển Dụng</h2>
+            <p>Đăng tin ngay để tìm kiếm ứng viên phù hợp chỉ trong 24h</p>
+            <div class="job-post-form">
+                <input type="text" id="job-title" placeholder="Tiêu đề công việc" class="form-input">
+                <textarea id="job-description" placeholder="Mô tả công việc" class="form-input" rows="4"></textarea>
+                <input type="text" id="job-location" placeholder="Địa điểm" class="form-input">
+                <input type="text" id="job-salary" placeholder="Mức lương (VD: 10-15 triệu)" class="form-input">
+                <button onclick="postJob()" class="recruit-button">Đăng Tin Miễn Phí</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="job-list-section">
+        <div class="job-list-container">
+            <h2>Danh Sách Tin Tuyển Dụng</h2>
+            <div id="jobList" class="job-list"></div>
+        </div>
+    </section>
+
+    <script src="dttd.js"></script>
+</body>
+</html>

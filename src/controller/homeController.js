@@ -1,7 +1,7 @@
 import UserService from "../service/UserService";
 
 const handleHome = (req, res) => {
-  return res.render("Home.ejs");
+  return res.render("index.ejs");
 };
 
 const handleUserPage = async (req, res) => {
@@ -47,7 +47,7 @@ const handleUpdateUser = async (req, res) => {
   await UserService.UpdateUserInfor(username, age, email, phone, id);
   return res.redirect("/user");
 };
-const handleregister = (req, res) => {
+const handleRegister = (req, res) => {
   return res.render("register.ejs");
 };
 
@@ -55,13 +55,36 @@ const handlelogin = (req, res) => {
   return res.render("login.ejs");
 };
 
+const handleDttd = (req, res) => {
+  return res.render("login.ejs");
+};
+
+const handleCV = (req, res) => {
+  return res.render("login.ejs");
+};
+ 
+const handelUserRegister = (req, res) => {
+  let email = req.body.email;
+  let username = req.body.username;
+  let password = req.body.password;
+
+  UserService.createNewUser(username, password, "null" , email, "null");
+
+  return res.render("index.ejs");
+};
+
+
+
 module.exports = {
   handleHome,
   handleUserPage,
   handelUserCreate,
   handelDeleteUser,
-  handleregister,
+  handleRegister,
   handlelogin,
   handleUserPageUpdate,
   handleUpdateUser,
+  handelUserRegister,
+  handleDttd,
+  handleCV,
 };

@@ -1,10 +1,86 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
 </head>
 <body>
-    <h1>Trang user</h1>
+  <div class="registration-container">
+    <form class="registration-form" method="POST" action="/register/create-user">
+      <div class="form-content">
+        <div class="form-inner">
+          <h3 class="welcome-text">CHÀO MỪNG BẠN ĐẾN VỚI VAA</h3>
+          <p class="subtitle">
+            Xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý tưởng
+          </p>
+          <label for="fullName" class="input-label">Họ và tên</label>
+          <div class="input-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/64d9bf1546f1c3e02d3b6da3e6d1421ef5ab90b36cae9ae04c10ed8abc81dbaa?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="input-icon" />
+            <input type="text" id="fullName" class="input-field" placeholder="Nhập họ tên" />
+          </div>
+          <label for="email" class="email-label">Email</label>
+          <div class="email-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/8df3e3fe3dbe6360de238344cf5303e66b1130defe5703be999954be3f81ad56?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="email-icon" />
+            <input type="email" id="email" class="email-input" placeholder="Nhập Email" />
+          </div>
+          <label for="password" class="password-label">Mật khẩu</label>
+          <div class="password-wrapper">
+            <div class="password-input-wrapper">
+              <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/f4a47ad7b4468dc3be013727e7b0f19ddf30d176ad6d789cad8335ab2fa508fc?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="password-icon" />
+              <input type="password" id="password" class="password-input" placeholder="Nhập mật khẩu" />
+            </div>
+          </div>
+          <label for="confirmPassword" class="confirm-password-label">Xác nhận mật khẩu</label>
+          <div class="confirm-password-wrapper">
+            <div class="confirm-password-input-wrapper">
+              <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/f4a47ad7b4468dc3be013727e7b0f19ddf30d176ad6d789cad8335ab2fa508fc?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="confirm-password-icon" />
+              <input type="password" id="confirmPassword" class="confirm-password-input" placeholder="Xác nhận mật khẩu" />
+            </div>
+          </div>
+          <div class="terms-wrapper">
+            <input type="checkbox" id="termsCheckbox" class="visually-hidden" />
+            <label for="termsCheckbox" class="terms-text">
+              Tôi đồng ý với
+              <span style="color: #00b14f">Điều khoản dịch vụ</span>
+              và
+              <span style="color: #00b14f">Chính sách bảo mật</span>
+              của Nhóm 12 VAA
+            </label>
+          </div>
+          <button type="submit" class="register-button">Đăng kí</button>
+          <p class="social-login-text">Hoặc đăng nhập bằng</p>
+          <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/2b04ab9090ff036c445c07e16094c7c09e70185d549beb315a8f1ca5c5012847?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Social login options" class="social-login-options" />
+          <div class="social-login-terms">
+              Bằng việc đăng nhập bằng tài khoản mạng xã hội, tôi đã đọc và đồng ý
+              với
+              <span style="color: #00b14f">Điều khoản dịch vụ</span>
+              và
+              <span style="color: #00b14f">Chính sách bảo mật</span>
+              của Nhóm 12 VAA
+            </label>
+          </div>
+          <p class="login-link">
+            Bạn đã có tài khoản?
+            <a href="/" style="color: #00b14f">Đăng nhập ngay</a>
+          </p>
+        </div>
+        <div class="divider"></div>
+        <div class="support-section">
+          <h2 class="support-title">Bạn gặp khó khăn khi tạo tài khoản ?</h2>
+          <p class="support-contact">
+            Vui lòng gọi tới số
+            <span style="color: #00b14f">(+84) 81 8xx xxxx</span>
+            (giờ hành chính)
+          </p>
+        </div>
+      </div>
+      <div class="side-image">
+        <img src="/image/anh1.png" alt="Background image" class="background-image" />
+      </div>
+    </form>
+  </div>
 </body>
 </html>
+

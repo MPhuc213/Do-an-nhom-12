@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Đồ án nhóm 12</title>
+</head>
+
+<body>
+    <header>
+        <img style="width: 0px" src="image/anh1.png" alt="">
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#"><img style="width: 150px" src="image/anh2.png" alt=""></a></li>
+                <li><a href="#">Việc làm <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="cv.ejs">Hồ sơ CV <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Công cụ<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Cẩm nang nghề nghiệp <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">NHÓM 12 <i class="fa-solid fa-star"></i></a></li>
+                <li><a href="register.ejs"><button class="register">Đăng ký</button></a></li>
+                <li><a href="login.ejs"><button class="login">Đăng nhập</button></a></li>
+                <li><a href="dttd.ejs"><button class="recruit">Đăng tuyển & Tìm hồ sơ</button></a></li>
+                <li><a href="#"><span class="btn-content"><span class="btn-top"></span></span><button>Liên hệ</button></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Danh mục ngành nghề -->
+    <section class="menu-bar">
+        <div class="container">
+            <div class="search-box">
+                <input class="search" type="text" placeholder="Vị trí tuyển dụng, tên công ty">
+                <select>
+                    <option>Địa điểm</option>
+                    <option>Hà Nội</option>
+                    <option>TP. Hồ Chí Minh</option>
+                    <option>Đà Nẵng</option>
+                </select>
+                <button class="search-btn">🔍 Tìm kiếm</button>
+            </div>
+        </div>
+        <div class="menu-bar-content">
+            <ul>
+                <li><a href="#">Kinh doanh/Bán hàng</a></li>
+                <li><a href="#">Marketing/PR/Quảng cáo</a></li>
+                <li><a href="#">Chăm sóc khách hàng</a></li>
+                <li><a href="#">Nhân sự/Hành chính/Pháp chế</a></li>
+                <li><a href="#">Tài chính/Ngân hàng/Bảo hiểm</a></li>
+                <li><a href="#">Công nghệ Thông tin</a></li>
+            </ul>
+            <a href="https://youtu.be/5y9EYHhAwPs">
+                <img src="image/anh4.png" alt="video" class="video1">
+            </a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <!-- Công việc mới nhất -->
+        <div class="top-content">
+            <div class="logo-section">
+                <h2>Việc làm tốt nhất</h2>
+                <img src="image/anh6.png" alt="company-logo">
+            </div>
+        </div>
+        <div class="filter-container">
+            <span class="filter-title">Lọc theo:</span>
+            <select id="location">
+                <option value="hanoi">Địa chỉ</option>
+                <option value="hcm">Mức lương</option>
+                <option value="danang">Kinh nghiệm</option>
+                <option value="danang">Ngành nghề</option>
+            </select>
+            <div class="category-filter">
+                <button class="filter-btn active">Ngẫu Nhiên</button>
+                <button class="filter-btn">Hà Nội</button>
+                <button class="filter-btn">Thành phố Hồ Chí Minh</button>
+                <button class="filter-btn">Miền Bắc</button>
+                <button class="filter-btn">Miền Nam</button>
+                <div class="view-all">
+                    <a href="#">Xem tất cả</a>
+                    <button class="nav-btn"><</button>
+                    <button class="nav-btn">></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="job-container">
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv1.png" alt="Công ty A">
+                </div>
+                <div class="job-info">
+                    <h3>Nhân viên Kinh Doanh/Sale/Tư vấn Lĩnh Vực Chăm Sóc Sức</h3>
+                    <p class="company">Công ty Cổ phần ABC</p>
+                    <div class="job-details">
+                        <p class="salary">15 - 20 triệu</p>
+                        <p class="location">Hà Nội</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv2.png" alt="Công ty B">
+                </div>
+                <div class="job-info">
+                    <h3>Nhân viên Marketing</h3>
+                    <p class="company">Công ty XYZ</p>
+                    <div class="job-details">
+                        <p class="salary">10 - 15 triệu</p>
+                        <p class="location">TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv3.png" alt="Công ty C">
+                </div>
+                <div class="job-info">
+                    <h3>Lập trình viên PHP</h3>
+                    <p class="company">Công ty DevTech</p>
+                    <div class="job-details">
+                        <p class="salary">20 - 30 triệu</p>
+                        <p class="location">Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv4.png" alt="Công ty D">
+                </div>
+                <div class="job-info">
+                    <h3>Chuyên viên Telesales</h3>
+                    <p class="company">Công ty CallMaster</p>
+                    <div class="job-details">
+                        <p class="salary">12 - 18 triệu</p>
+                        <p class="location">Hà Nội</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv5.png" alt="Công ty E">
+                </div>
+                <div class="job-info">
+                    <h3>Chuyên viên SEO</h3>
+                    <p class="company">Công ty DigitalPro</p>
+                    <div class="job-details">
+                        <p class="salary">15 - 22 triệu</p>
+                        <p class="location">TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv6.png" alt="Công ty F">
+                </div>
+                <div class="job-info">
+                    <h3>Nhân viên Kế toán</h3>
+                    <p class="company">Công ty Tài Chính Vina</p>
+                    <div class="job-details">
+                        <p class="salary">18 - 25 triệu</p>
+                        <p class="location">Hải Phòng</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv7.png" alt="Công ty G">
+                </div>
+                <div class="job-info">
+                    <h3>Chuyên viên Nhân sự</h3>
+                    <p class="company">Công ty HR Solutions</p>
+                    <div class="job-details">
+                        <p class="salary">14 - 20 triệu</p>
+                        <p class="location">Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv8.png" alt="Công ty H">
+                </div>
+                <div class="job-info">
+                    <h3>Chuyên viên Tư vấn</h3>
+                    <p class="company">Công ty Tư Vấn ABC</p>
+                    <div class="job-details">
+                        <p class="salary">16 - 24 triệu</p>
+                        <p class="location">Cần Thơ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv9.png" alt="Công ty I">
+                </div>
+                <div class="job-info">
+                    <h3>Kỹ sư Phần mềm</h3>
+                    <p class="company">Công ty TechSolution</p>
+                    <div class="job-details">
+                        <p class="salary">25 - 35 triệu</p>
+                        <p class="location">Hà Nội</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv10.png" alt="Công ty B">
+                </div>
+                <div class="job-info">
+                    <h3>Nhân viên Marketing</h3>
+                    <p class="company">Công ty XYZ</p>
+                    <div class="job-details">
+                        <p class="salary">10 - 15 triệu</p>
+                        <p class="location">TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv11.png" alt="Công ty B">
+                </div>
+                <div class="job-info">
+                    <h3>Nhân viên Marketing</h3>
+                    <p class="company">Công ty XYZ</p>
+                    <div class="job-details">
+                        <p class="salary">10 - 15 triệu</p>
+                        <p class="location">TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-logo">
+                    <img src="image/cv12.png" alt="Công ty B">
+                </div>
+                <div class="job-info">
+                    <h3>Nhân viên Marketing</h3>
+                    <p class="company">Công ty XYZ</p>
+                    <div class="job-details">
+                        <p class="salary">10 - 15 triệu</p>
+                        <p class="location">TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/2a6cfae8c12ae3aa5b4a7d9c9ff086a5d0a7d1f3cd6dead0b88f8791b5fc4f7a?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Banner" class="banner" />
+    <section class="features-section">
+        <div class="category-filter2">
+            <button class="active">Tất cả</button>
+            <button>Ngân hàng</button>
+            <button>Bất động sản</button>
+            <button>Xây dựng</button>
+            <button>IT - Phần mềm</button>
+            <button>Tài chính</button>
+            <button>Bán lẻ - FMCG</button>
+            <button>Sản xuất</button>
+        </div>
+        <div class="company-list">
+            <div class="company-card">
+                <img src="logo1.png" alt="Logo Công ty">
+                <h3>CÔNG TY CỔ PHẦN TẬP ĐOÀN THÀNH CÔNG</h3>
+                <p>Bất động sản</p>
+                <span>📂 5 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo2.png" alt="Logo Công ty">
+                <h3>CÔNG TY TNHH BIA CARLSBERG VIỆT NAM</h3>
+                <p>Bán lẻ - FMCG</p>
+                <span>📂 7 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo3.png" alt="Logo Công ty">
+                <h3>NGÂN HÀNG TMCP THỊNH VƯỢNG</h3>
+                <p>Ngân hàng</p>
+                <span>📂 5 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo4.png" alt="Logo Công ty">
+                <h3>CÔNG TY CỔ PHẦN TASCO</h3>
+                <p>Bất động sản</p>
+                <span>📂 19 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo5.png" alt="Logo Công ty">
+                <h3>CHI NHÁNH BMW LÊ VĂN LƯƠNG</h3>
+                <p>Bảo trì / Sửa chữa</p>
+                <span>📂 3 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo6.png" alt="Logo Công ty">
+                <h3>CÔNG TY CỔ PHẦN CHỨNG KHOÁN AIS</h3>
+                <p>Chứng khoán</p>
+                <span>📂 3 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo7.png" alt="Logo Công ty">
+                <h3>CÔNG TY FUJIKIN VIỆT NAM</h3>
+                <p>Sản xuất</p>
+                <span>📂 6 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo8.png" alt="Logo Công ty">
+                <h3>GENERALI VIETNAM</h3>
+                <p>Bảo hiểm</p>
+                <span>📂 1 việc làm</span>
+            </div>
+
+            <div class="company-card">
+                <img src="logo9.png" alt="Logo Công ty">
+                <h3>CÔNG TY TNHH VN ĐẠI PHONG</h3>
+                <p>Bán lẻ - FMCG</p>
+                <span>📂 7 việc làm</span>
+            </div>
+        </div>
+        <!-- Nút tìm hiểu thêm -->
+        <div class="more-info">
+            <button>Tìm hiểu thêm về TopCV <span>Pro</span>  --> </button>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/428145a0d9b41073078b1825905f40719b605ae447ee183c012348352d51d431?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Testimonial Background" class="testimonial-background" />
+        <div class="testimonial-content">
+            <h2 class="testimonial-title">TOP NGÀNH NGHỀ NỔI BẬT</h2>
+            <p class="testimonial-subtitle">Bạn muốn tìm việc mới? Xem danh sách việc làm tại đây</p>
+
+            <div class="testimonial-grid">
+                <!-- Hàng đầu tiên -->
+                <div class="testimonial-row">
+                    <div class="testimonial-column">
+                        <img src="image/icon1.png" alt="Kinh doanh">
+                        <h3>Kinh doanh - Bán hàng</h3>
+                        <p class="job-count">7.641 việc làm</p>
+                    </div>
+                    <div class="testimonial-column">
+                        <img src="image/icon2.png" alt="Marketing">
+                        <h3>Marketing - PR - Quảng cáo</h3>
+                        <p class="job-count">5.048 việc làm</p>
+                    </div>
+                    <div class="testimonial-column">
+                        <img src="image/icon3.png" alt="CSKH">
+                        <h3>Chăm sóc khách hàng</h3>
+                        <p class="job-count">1.743 việc làm</p>
+                    </div>
+                    <div class="testimonial-column">
+                        <img src="image/icon4.png" alt="Nhân sự">
+                        <h3>Nhân sự - Hành chính</h3>
+                        <p class="job-count">3.034 việc làm</p>
+                    </div>
+                </div>
+                <!-- Hàng thứ hai -->
+                <div class="testimonial-row">
+                    <div class="testimonial-column">
+                        <img src="image/icon5.png" alt="Tài chính">
+                        <h3>Tài chính - Ngân hàng</h3>
+                        <p class="job-count">718 việc làm</p>
+                    </div>
+                    <div class="testimonial-column">
+                        <img src="image/icon6.png" alt="CNTT">
+                        <h3>Công nghệ Thông tin</h3>
+                        <p class="job-count">3.316 việc làm</p>
+                    </div>
+                    <div class="testimonial-column">
+                        <img src="image/icon7.png" alt="Bất động sản">
+                        <h3>Bất động sản - Xây dựng</h3>
+                        <p class="job-count">1.166 việc làm</p>
+                    </div>
+                    <div class="testimonial-column">
+                        <img src="image/icon8.png" alt="Kế toán">
+                        <h3>Kế toán - Kiểm toán - Thuế</h3>
+                        <p class="job-count">2.864 việc làm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="features-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/7d1818399fd049d8f11bbf331e5777f17a88dd4c3f8c84e7b0e9821e5d23212c?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Features Title" class="features-title" />
+        <div class="features-grid">
+            <div class="features-row">
+                <div class="feature-column">
+                    <div class="feature-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/b5e82e3311c076163be84c86bb77b67ef71de21501f5c78a13d4fa0cbfad112e?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="feature-background" />
+                        <h3 class="feature-title">Nhom12 Profile</h3>
+                        <p class="feature-description">TopCV Profile là bản hồ sơ năng lực giúp bạn xây dựng thương hiệu cá nhân, thể hiện thế mạnh của bản thân thông qua việc đính kèm học vấn, kinh nghiệm, dự án, kỹ năng,... của mình</p>
+                        <a href="#" class="feature-button">Tạo Profile</a>
+                    </div>
+                </div>
+                <div class="feature-column">
+                    <div class="feature-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/b5e82e3311c076163be84c86bb77b67ef71de21501f5c78a13d4fa0cbfad112e?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="feature-background" />
+                        <h3 class="feature-title">CV Buider 2.0</h3>
+                        <p class="feature-description">Một chiếc CV chuyên nghiệp sẽ giúp bạn gây ấn tượng với nhà tuyển dụng và tăng khả năng vượt qua vòng lọc CV.</p>
+                        <a href="#" class="feature-button">Tạo CV ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="features-row">
+                <div class="feature-column">
+                    <div class="feature-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/b5e82e3311c076163be84c86bb77b67ef71de21501f5c78a13d4fa0cbfad112e?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="feature-background" />
+                        <h3 class="feature-title">Trắc nghiệm tính cách MBTI</h3>
+                        <p class="feature-description">Kết quả trắc nghiệm MBTI chỉ ra cách bạn nhận thức thế giới xung quanh và ra quyết định trong cuộc sống, từ đó, giúp bạn có thêm thông tin để lựa chọn nghề nghiệp chính xác hơn.</p>
+                        <a href="#" class="feature-button">Khám phá ngay</a>
+                    </div>
+                </div>
+                <div class="feature-column">
+                    <div class="feature-card">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/b5e82e3311c076163be84c86bb77b67ef71de21501f5c78a13d4fa0cbfad112e?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="" class="feature-background" />
+                        <h3 class="feature-title">Trắc nghiệm đa trí thông minh MI</h3>
+                        <p class="feature-description">Trả lời cho câu hỏi 'Bạn có trí thông minh nổi trội trong lĩnh vực nào?', từ đó bạn có thể hiểu bản thân mình hơn và đưa ra các quyết định nghề nghiệp phù hợp.</p>
+                        <a href="#" class="feature-button">Khám phá ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo-section">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/3586924996faf11d814edeaad25bc641a2edfb9a159f670818a37f7248cb19a3?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Footer Logo" class="footer-logo" />
+                    <div class="footer-links">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/217cef55d75913be6f19c6fb5f32e72cb9772a90b021d83e43d076691c036ca4?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Footer Links" class="footer-link-group" />
+                        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/61a870550b8cdfdc1d2e71b01feee2c379aa9d6bc22ab6a1979887526a9f04b1?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Footer Link" class="footer-link" />
+                        <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/c56b11dbfd8b260173ee7e530fd5ed9aff0ed0c890bddcd20efa400d8e0158ff?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Social Media Links" class="footer-social" />
+                    </div>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/4e9f2858fbc4869137fa272ac8782a1880d0405a2008e48602914fb0f001a91c?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Copyright" class="footer-copyright" />
+                </div>
+            </div>
+            <div class="footer-nav-column">
+                <div class="footer-nav">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/90ce7c373927866595fe9eb7aada188890182b8968032f8cb3cd53d474820e6c?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Footer Navigation" class="footer-nav-content" />
+                </div>
+            </div>
+            <div class="footer-info-column">
+                <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/3dac07d2c2a15e7349e49efd0e37d60251aa40ec42e0e5f8f5c1b92efe9afa1f?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Footer Information" class="footer-info" />
+            </div>
+            <div class="footer-contact-column">
+                <img src="https://cdn.builder.io/api/v1/image/assets/ff24d3a6c6b047c6862a1a3590aea420/1d219ea6f6c987a5c26f7524d791394f47b0a83b0f4ebd5b64f99b19449b5120?apiKey=ff24d3a6c6b047c6862a1a3590aea420&" alt="Contact Information" class="footer-contact" />
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
